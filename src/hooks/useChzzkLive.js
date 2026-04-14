@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 
+// 60초마다 라이브 상태를 재조회 (비공식 API 과부하 방지)
+const POLL_INTERVAL_MS = 60_000;
+
 async function fetchStatus(chzzkId) {
   try {
     const res = await window.fetch(
@@ -17,19 +20,35 @@ async function fetchStatus(chzzkId) {
   }
 }
 
-// 여러 채널의 라이브 상태를 한 번에 조회
+async function fetchAll(chzzkIds) {
+  const results = await Promise.all(
+    chzzkIds.map(id => fetchStatus(id).then(s => [id, s]))
+  );
+  return Object.fromEntries(results);
+}
+
+// 여러 채널의 라이브 상태를 한 번에 조회하고 60초마다 갱신
 export function useChzzkLive(chzzkIds) {
   const [statuses, setStatuses] = useState({});
   const [loading, setLoading]   = useState(true);
 
   useEffect(() => {
     if (!chzzkIds.length) { setLoading(false); return; }
-    Promise.all(chzzkIds.map(id => fetchStatus(id).then(s => [id, s])))
-      .then(results => {
-        setStatuses(Object.fromEntries(results));
-        setLoading(false);
-      });
-  }, []); // 마운트 시 1회 실행
+
+    // 최초 조회
+    fetchAll(chzzkIds).then(result => {
+      setStatuses(result);
+      setLoading(false);
+    });
+
+    // 60초마다 재조회
+    const interval = setInterval(() => {
+      fetchAll(chzzkIds).then(setStatuses);
+    }, POLL_INTERVAL_MS);
+
+    // 컴포넌트 언마운트 시 인터벌 정리
+    return () => clearInterval(interval);
+  }, []);
 
   return { statuses, loading };
 }
