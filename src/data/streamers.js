@@ -38,8 +38,8 @@ export const streamers = [
     network: '픽셀 네트워크',
     generation: null,
     chzzkId: '2eee29ce69664154d8bc478825941259',
-    channelId: null,
-    handle: null, username: 'jhk0408',
+    channelId: 'UCTZPZo3xuW5k6RkhlVaJ0jQ',
+    handle: null, username: null,
     links: [
       { label: '치지직', url: 'https://chzzk.naver.com/2eee29ce69664154d8bc478825941259' },
       { label: '유튜브', url: 'http://www.youtube.com/user/jhk0408' },
@@ -140,8 +140,8 @@ export const streamers = [
     network: '픽셀 네트워크',
     generation: null,
     chzzkId: 'e112cad680f895d13769c43f56171b4a',
-    channelId: 'UCUDmolBJYp-A9Vso1-OjEHA',
-    handle: null, username: null,
+    channelId: null,
+    handle: 'agueppo', username: null,
     links: [
       { label: '치지직', url: 'https://chzzk.naver.com/e112cad680f895d13769c43f56171b4a' },
       { label: '유튜브', url: 'https://youtube.com/@agueppo' },
@@ -191,8 +191,8 @@ export const streamers = [
     network: '픽셀 네트워크',
     generation: null,
     chzzkId: '2086f44c7b09a17cef6786f21389db3b',
-    channelId: 'UC-wtcvP_nEsTOPdy6_vQNxQ',
-    handle: null, username: null,
+    channelId: null,
+    handle: '지누', username: null,
     links: [
       { label: '치지직', url: 'https://chzzk.naver.com/2086f44c7b09a17cef6786f21389db3b' },
       { label: '유튜브', url: 'https://www.youtube.com/@지누' },
