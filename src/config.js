@@ -20,5 +20,3 @@ export const NETWORK_STYLES = {
   '스텔라이브':   { badge: 'bg-[#2a0a3d] text-[#a855f7]', accentBorder: 'hover:border-[#a855f7]' },
 };
 
-// YouTube Data API v3 키
-export const YT_API_KEY = 'AIzaSyBuC0b-Fl3jmq4yRCnUNxrUUC4-iKlsBNw';

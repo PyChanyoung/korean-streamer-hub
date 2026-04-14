@@ -1,19 +1,18 @@
 import { useState, useCallback } from 'react';
-import { YT_API_KEY } from '../config';
 
 const cache = {};
 
 async function resolveChannelId({ channelId, handle, username }) {
   if (channelId) return channelId;
   if (handle) {
-    const url = `https://www.googleapis.com/youtube/v3/channels?part=id&forHandle=${encodeURIComponent(handle)}&key=${YT_API_KEY}`;
+    const url = `/api/youtube?endpoint=channels&part=id&forHandle=${encodeURIComponent(handle)}`;
     const res = await window.fetch(url);
     if (!res.ok) throw new Error('handle 조회 실패');
     const data = await res.json();
     return data.items?.[0]?.id ?? null;
   }
   if (username) {
-    const url = `https://www.googleapis.com/youtube/v3/channels?part=id&forUsername=${encodeURIComponent(username)}&key=${YT_API_KEY}`;
+    const url = `/api/youtube?endpoint=channels&part=id&forUsername=${encodeURIComponent(username)}`;
     const res = await window.fetch(url);
     if (!res.ok) throw new Error('username 조회 실패');
     const data = await res.json();
@@ -23,7 +22,7 @@ async function resolveChannelId({ channelId, handle, username }) {
 }
 
 async function fetchVideos(playlistId) {
-  const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=8&key=${YT_API_KEY}`;
+  const url = `/api/youtube?endpoint=playlistItems&part=snippet&playlistId=${playlistId}&maxResults=8`;
   const res = await window.fetch(url);
   if (!res.ok) return null;
   const data = await res.json();
