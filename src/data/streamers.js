@@ -238,18 +238,19 @@ export const streamers = [
     ],
   },
 
-  // ─── 스텔라이브 ────────────────────────────────────────────
+  // ─── 스텔라이브 (JSON 작성 순서 = 기수 순 유지) ───────────────
+  // 1st Everys
   {
-    name: '네네코 마시로',
+    name: '아야츠노 유니',
     network: '스텔라이브',
-    generation: '2nd Universe',
-    chzzkId: '4515b179f86b67b4981e16190817c580',
+    generation: '1st Everys',
+    chzzkId: '45e71a76e949e16a34764deb962f9d9f',
     channelId: null,
-    handle: 'neneko_mashiro', username: null,
+    handle: 'ayatsunoyuni', username: null,
     links: [
-      { label: '치지직', url: 'https://chzzk.naver.com/4515b179f86b67b4981e16190817c580' },
-      { label: '유튜브', url: 'https://www.youtube.com/@neneko_mashiro' },
-      { label: '다시보기', url: 'https://www.youtube.com/@mashiroreplay' },
+      { label: '치지직', url: 'https://chzzk.naver.com/45e71a76e949e16a34764deb962f9d9f' },
+      { label: '유튜브', url: 'https://www.youtube.com/@ayatsunoyuni' },
+      { label: '다시보기', url: 'https://www.youtube.com/@Yunireplay' },
     ],
   },
   {
@@ -265,6 +266,7 @@ export const streamers = [
       { label: '다시보기', url: 'https://www.youtube.com/@Sakihanereplay' },
     ],
   },
+  // 2nd Universe
   {
     name: '시라유키 히나',
     network: '스텔라이브',
@@ -279,29 +281,16 @@ export const streamers = [
     ],
   },
   {
-    name: '아야츠노 유니',
+    name: '네네코 마시로',
     network: '스텔라이브',
-    generation: '1st Everys',
-    chzzkId: '45e71a76e949e16a34764deb962f9d9f',
+    generation: '2nd Universe',
+    chzzkId: '4515b179f86b67b4981e16190817c580',
     channelId: null,
-    handle: 'ayatsunoyuni', username: null,
+    handle: 'neneko_mashiro', username: null,
     links: [
-      { label: '치지직', url: 'https://chzzk.naver.com/45e71a76e949e16a34764deb962f9d9f' },
-      { label: '유튜브', url: 'https://www.youtube.com/@ayatsunoyuni' },
-      { label: '다시보기', url: 'https://www.youtube.com/@Yunireplay' },
-    ],
-  },
-  {
-    name: '아오쿠모 린',
-    network: '스텔라이브',
-    generation: '3rd Cliché',
-    chzzkId: '516937b5f85cbf2249ce31b0ad046b0f',
-    channelId: 'UCQmcltnre6aG9SkDRYZqFIg',
-    handle: null, username: null,
-    links: [
-      { label: '치지직', url: 'https://chzzk.naver.com/516937b5f85cbf2249ce31b0ad046b0f' },
-      { label: '유튜브', url: 'https://www.youtube.com/channel/UCQmcltnre6aG9SkDRYZqFIg' },
-      { label: '다시보기', url: 'https://www.youtube.com/@rinreplay' },
+      { label: '치지직', url: 'https://chzzk.naver.com/4515b179f86b67b4981e16190817c580' },
+      { label: '유튜브', url: 'https://www.youtube.com/@neneko_mashiro' },
+      { label: '다시보기', url: 'https://www.youtube.com/@mashiroreplay' },
     ],
   },
   {
@@ -330,19 +319,7 @@ export const streamers = [
       { label: '다시보기', url: 'https://www.youtube.com/@tabireplay' },
     ],
   },
-  {
-    name: '유즈하 리코',
-    network: '스텔라이브',
-    generation: '3rd Cliché',
-    chzzkId: '8fd39bb8de623317de90654718638b10',
-    channelId: null,
-    handle: 'yuzuhariko', username: null,
-    links: [
-      { label: '치지직', url: 'https://chzzk.naver.com/8fd39bb8de623317de90654718638b10' },
-      { label: '유튜브', url: 'https://www.youtube.com/@yuzuhariko' },
-      { label: '다시보기', url: 'https://www.youtube.com/@rikoreplay' },
-    ],
-  },
+  // 3rd Cliché
   {
     name: '텐코 시부키',
     network: '스텔라이브',
@@ -357,6 +334,19 @@ export const streamers = [
     ],
   },
   {
+    name: '아오쿠모 린',
+    network: '스텔라이브',
+    generation: '3rd Cliché',
+    chzzkId: '516937b5f85cbf2249ce31b0ad046b0f',
+    channelId: 'UCQmcltnre6aG9SkDRYZqFIg',
+    handle: null, username: null,
+    links: [
+      { label: '치지직', url: 'https://chzzk.naver.com/516937b5f85cbf2249ce31b0ad046b0f' },
+      { label: '유튜브', url: 'https://www.youtube.com/channel/UCQmcltnre6aG9SkDRYZqFIg' },
+      { label: '다시보기', url: 'https://www.youtube.com/@rinreplay' },
+    ],
+  },
+  {
     name: '하나코 나나',
     network: '스텔라이브',
     generation: '3rd Cliché',
@@ -367,6 +357,19 @@ export const streamers = [
       { label: '치지직', url: 'https://chzzk.naver.com/4d812b586ff63f8a2946e64fa860bbf5' },
       { label: '유튜브', url: 'https://www.youtube.com/@hanako_nana' },
       { label: '다시보기', url: 'https://www.youtube.com/@nana_replay' },
+    ],
+  },
+  {
+    name: '유즈하 리코',
+    network: '스텔라이브',
+    generation: '3rd Cliché',
+    chzzkId: '8fd39bb8de623317de90654718638b10',
+    channelId: null,
+    handle: 'yuzuhariko', username: null,
+    links: [
+      { label: '치지직', url: 'https://chzzk.naver.com/8fd39bb8de623317de90654718638b10' },
+      { label: '유튜브', url: 'https://www.youtube.com/@yuzuhariko' },
+      { label: '다시보기', url: 'https://www.youtube.com/@rikoreplay' },
     ],
   },
 ];

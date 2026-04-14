@@ -5,8 +5,11 @@ import Modal from './components/Modal';
 import { useChzzkLive } from './hooks/useChzzkLive';
 import { SITE, FILTERS } from './config';
 
-// 이름 내림차순 정렬 (한국어)
-const sorted = [...streamers].sort((a, b) => b.name.localeCompare(a.name, 'ko'));
+// 픽셀 네트워크: 이름 내림차순 / 스텔라이브: 데이터 파일 순서 유지 (기수별)
+const sorted = [
+  ...streamers.filter(s => s.network === '픽셀 네트워크').sort((a, b) => b.name.localeCompare(a.name, 'ko')),
+  ...streamers.filter(s => s.network === '스텔라이브'),
+];
 
 export default function App() {
   const [filter, setFilter] = useState('all');
