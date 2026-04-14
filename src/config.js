@@ -3,8 +3,8 @@
 // ================================================================
 
 export const SITE = {
-  title: 'Korean',
-  titleAccent: 'Streamer Hub',
+  title: 'Streamer',
+  titleAccent: 'Hub',
   subtitle: '치지직 스트리머 & 버츄얼 유튜버 모음',
   footerNote: 'src/data/streamers.js 파일에 스트리머를 추가하면 됩니다.',
 };
